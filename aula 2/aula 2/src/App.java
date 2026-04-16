@@ -26,6 +26,12 @@ public class App {
                     Integer id = sc.nextInt();
                     deletar(id);
                     break;
+                case 4:
+                    mostrar();
+                    System.out.println("Digite o id a ser editado: ");
+                    Integer id2 = sc.nextInt();
+                    editar(id2);
+                    break;
             }
         }
     }
@@ -60,4 +66,25 @@ public class App {
         Aluno aluno = alunos.get(id);
         alunos.remove(aluno);
     }
+    public static void editar(Integer id){
+        Scanner sc = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        Aluno aluno = alunos.get(id);
+        System.out.println("O nome do aluno é "
+        +aluno.getNome()+" digite 1 para editar: ");
+        Integer opcao = sc.nextInt();
+        if (opcao == 1){
+            System.out.println("Digite o novo nome é ");
+            aluno.setNome(sc2.nextLine());
+
+    }
+     System.out.println("O IDADE do aluno é "
+        +aluno.getNome()+" digite 1 para editar: ");
+
+      if (opcao == 1){
+            System.out.println("Digite o novo nome é ");
+            aluno.setIdade(sc2.nextInt());
+
+}
+
 }
